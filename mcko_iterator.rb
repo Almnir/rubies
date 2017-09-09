@@ -11,7 +11,8 @@ Date.new(2017, 03, 20).upto(Date.today) do |date|
     uri = URI('http://mcko.ru/api/diagnostic_requests_export')
     params = { 'date' =>  "#{date.to_s}"}
     uri.query = URI.encode_www_form(params)
-    # puts uri.query
+    puts uri.query
+    puts uri.to_s
     res = Net::HTTP.get_response(uri)
     if res.is_a?(Net::HTTPSuccess) && !res.body.empty? && res.body != '[]'
         result = res.body.force_encoding("utf-8")

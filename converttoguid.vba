@@ -1,5 +1,3 @@
-' Скрипт для конвертации ID в GUID
-' (с) ФГБУ ФЦТ 2017
 Option Explicit
 
 Function GetHash(ByVal txt$) As String
@@ -21,21 +19,11 @@ Function HashToGuid(ByVal strInput As String) As String
    HashToGuid = Mid$(strInput, 1, 8) + "-" + Mid$(strInput, 9, 4) + "-" + Mid$(strInput, 13, 4) + "-" + Mid$(strInput, 17, 4) + "-" + Mid$(strInput, 21)
 End Function
 
-
-Sub ConvertToGuid()
-    Dim columns As Variant
-    columns = Array("A", "B")
-    Dim column As Variant
-    For Each column In columns
-        ConvertColumn (column)
-    Next column
-End Sub
-
 Sub ConvertColumn(columnName As String)
     Dim columnIndex As Integer
-    columnIndex = range(columnName & 1).column
+    columnIndex = Range(columnName & 1).column
     Dim maxRow As Long
-    maxRow = ActiveSheet.Cells(ActiveSheet.Rows.count, columnName).End(xlUp).row
+    maxRow = ActiveSheet.Cells(ActiveSheet.Rows.Count, columnName).End(xlUp).Row
     Dim i As Long
     For i = 6 To maxRow
        Dim strCell As String
@@ -43,6 +31,22 @@ Sub ConvertColumn(columnName As String)
        Cells(i, columnIndex).Value = HashToGuid(strCell)
     Next i
 End Sub
+
+Sub ConvertToGuid()
+    Dim columns As Variant
+    ' Ìàññèâ ñòîëáöîâ, êîòîðûå ñîäåðæàò ID äëÿ ïðåîáðàçîâàíèÿ â GUID
+    columns = Array("A", "B")
+    Dim rowStart As Long
+    ' Ñòàðòîâàÿ ñòðîêà ñ äàííûìè (â ðàçíûõ òàáëèöàõ ïåðâàÿ çíà÷àùàÿ ñòðîêà ðàçëè÷àåòñÿ ïî èíäåêñó)
+    ' Íàïðèìåð â rbd_CurrentRegion.xlsx ID íà÷èíàåòñÿ ñ A6, ñîîòâåòñòâåííî rowStart = 6
+    rowStart = 6
+    Dim column As Variant
+    For Each column In columns
+        ConvertColumn (column)
+    Next column
+End Sub
+
+
 
 
 
