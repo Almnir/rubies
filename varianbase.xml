@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="windows-1251"?><regions_variants>
+  <region code='1' name='Республика Адыгея'/>
+  <region code='2' name='Республика Башкортостан'/>
+  <region code='3' name='Республика Бурятия'/>
+  <region code='4' name='Республика Алтай'/>
+  <region code='5' name='Республика Дагестан'/>
+  <region code='6' name='Республика Ингушетия'/>
+  <region code='7' name='Кабардино-Балкарская Республика'/>
+  <region code='8' name='Республика Калмыкия'/>
+  <region code='9' name='Карачаево-Черкесская Республика'/>
+  <region code='10' name='Республика Карелия'/>
+  <region code='11' name='Республика Коми'/>
+  <region code='12' name='Республика Марий Эл'/>
+  <region code='13' name='Республика Мордовия'/>
+  <region code='14' name='Республика Саха (Якутия)'/>
+  <region code='15' name='Республика Северная Осетия'/>
+  <region code='16' name='Республика Татарстан'/>
+  <region code='17' name='Республика Тыва'/>
+  <region code='18' name='Удмуртская Республика'/>
+  <region code='19' name='Республика Хакасия'/>
+  <region code='20' name='Чеченская Республика'/>
+  <region code='21' name='Чувашская Республика'/>
+  <region code='22' name='Алтайский край'/>
+  <region code='23' name='Краснодарский край'/>
+  <region code='24' name='Красноярский край'/>
+  <region code='25' name='Приморский край'/>
+  <region code='26' name='Ставропольский край'/>
+  <region code='27' name='Хабаровский край'/>
+  <region code='28' name='Амурская область'/>
+  <region code='29' name='Архангельская область'/>
+  <region code='30' name='Астраханская область'/>
+  <region code='31' name='Белгородская область'/>
+  <region code='32' name='Брянская область'/>
+  <region code='33' name='Владимирская область'/>
+  <region code='34' name='Волгоградская область'/>
+  <region code='35' name='Вологодская область'/>
+  <region code='36' name='Воронежская область'/>
+  <region code='37' name='Ивановская область'/>
+  <region code='38' name='Иркутская область'/>
+  <region code='39' name='Калининградская область'/>
+  <region code='40' name='Калужская область'/>
+  <region code='41' name='Камчатский край'/>
+  <region code='42' name='Кемеровская область'/>
+  <region code='43' name='Кировская область'/>
+  <region code='44' name='Костромская область'/>
+  <region code='45' name='Курганская область'/>
+  <region code='46' name='Курская область'/>
+  <region code='47' name='Ленинградская область'/>
+  <region code='48' name='Липецкая область'/>
+  <region code='49' name='Магаданская область'/>
+  <region code='50' name='Московская область'/>
+  <region code='51' name='Мурманская область'/>
+  <region code='52' name='Нижегородская область'/>
+  <region code='53' name='Новгородская область'/>
+  <region code='54' name='Новосибирская область'/>
+  <region code='55' name='Омская область'/>
+  <region code='56' name='Оренбургская область'/>
+  <region code='57' name='Орловская область'/>
+  <region code='58' name='Пензенская область'/>
+  <region code='59' name='Пермский край'/>
+  <region code='60' name='Псковская область'/>
+  <region code='61' name='Ростовская область'/>
+  <region code='62' name='Рязанская область'/>
+  <region code='63' name='Самарская область'/>
+  <region code='64' name='Саратовская область'/>
+  <region code='65' name='Сахалинская область'/>
+  <region code='66' name='Свердловская область'/>
+  <region code='67' name='Смоленская область'/>
+  <region code='68' name='Тамбовская область'/>
+  <region code='69' name='Тверская область'/>
+  <region code='70' name='Томская область'/>
+  <region code='71' name='Тульская область'/>
+  <region code='72' name='Тюменская область'/>
+  <region code='73' name='Ульяновская область'/>
+  <region code='74' name='Челябинская область'/>
+  <region code='75' name='Забайкальский край'/>
+  <region code='76' name='Ярославская область'/>
+  <region code='77' name='г. Москва'/>
+  <region code='78' name='г. Санкт-Петербург'/>
+  <region code='79' name='Еврейская автономная область'/>
+  <region code='82' name='Республика Крым'/>
+  <region code='83' name='Ненецкий автономный округ'/>
+  <region code='86' name='Ханты-Мансийский автономный округ'/>
+  <region code='87' name='Чукотский автономный округ'/>
+  <region code='89' name='Ямало-Ненецкий автономный округ'/>
+  <region code='90' name='ОО, находящиеся за пределами РФ'/>
+  <region code='92' name='г. Севастополь'/>
+</regions_variants>

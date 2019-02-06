@@ -4,7 +4,7 @@ require 'net/http'
 # STARTER = 'd:\Projects\m_use\binaries\Debug\AnyCPU\DDWorker\DDWorkerConsole.exe'
 STARTER = File.join("D:", "Projects", "m_use", "binaries", "Release", "AnyCPU", "DDWorker", "DDWorkerConsole.exe")
 
-Date.new(2017, 05, 01).upto(Date.today) do |date|
+Date.new(2018, 12, 01).upto(Date.today) do |date|
     # params = {date: '#{date.to_s}', content_type: :json}
     # response = RestClient.get 'http://mcko.ru/api/diagnostic_requests_export', params
     uri = URI('http://mcko.ru/api/diagnostic_requests_export')

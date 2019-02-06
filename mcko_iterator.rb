@@ -5,7 +5,7 @@ require 'json'
 json = []
 
 allcounter = 0
-Date.new(2017, 03, 20).upto(Date.today) do |date|
+Date.new(2018, 12, 01).upto(Date.new(2018, 12, 13)) do |date|
     # params = {date: '#{date.to_s}', content_type: :json}
     # response = RestClient.get 'http://mcko.ru/api/diagnostic_requests_export', params
     uri = URI('http://mcko.ru/api/diagnostic_requests_export')
@@ -40,6 +40,6 @@ end
 puts "Всего участников выгружено : #{allcounter}"
 
 
-File.open('d:\rubies\json_mcko1.txt', 'w:windows-1251') do |file|
+File.open('d:\rubies\json_mcko_today.txt', 'w:windows-1251') do |file|
     file.write json.to_json
 end
