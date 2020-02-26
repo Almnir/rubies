@@ -1,7 +1,9 @@
-require "java"
 require "rubygems"
+require "java"
 # require "sequel"
 require 'd:\rubies\sqljdbc42.jar'
+
+Java::com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 # DB = Sequel.connect(
 #   	:adapter => "jdbc",
@@ -14,8 +16,8 @@ require 'd:\rubies\sqljdbc42.jar'
 #     p row
 # end
 
-url = "jdbc:sqlserver://10.0.18.110;database=erbd_gia_reg_18_70"
-conn = java.sql.DriverManager.get_connection(url, 'sa', 'Qwerty123')
+url = "jdbc:sqlserver://10.0.18.3:1433;databaseName=erbd_gia_reg_19_03;integratedSecurity=false;"
+conn = java.sql.DriverManager.get_connection(url, 'ra', 'Njkmrjcdjb')
 
 statement = conn.create_statement
 

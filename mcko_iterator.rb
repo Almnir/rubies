@@ -5,13 +5,13 @@ require 'json'
 json = []
 
 allcounter = 0
-Date.new(2018, 12, 01).upto(Date.new(2018, 12, 13)) do |date|
+Date.new(2019, 1, 1).upto(DateTime.now) do |date|
     # params = {date: '#{date.to_s}', content_type: :json}
     # response = RestClient.get 'http://mcko.ru/api/diagnostic_requests_export', params
-    uri = URI('http://mcko.ru/api/diagnostic_requests_export')
+    uri = URI('https://mcko.ru/api/diagnostic_requests_export')
     params = { 'date' =>  "#{date.to_s}"}
     uri.query = URI.encode_www_form(params)
-    puts uri.query
+    # puts uri.query
     puts uri.to_s
     res = Net::HTTP.get_response(uri)
     if res.is_a?(Net::HTTPSuccess) && !res.body.empty? && res.body != '[]'

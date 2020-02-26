@@ -65,8 +65,15 @@ result = ""
 
 tablesList.split.each do |table|
     sqlquery = %Q[
-SELECT COUNT(*) as #{table} FROM dbo.#{table}
+SELECT COUNT(*) as #{table} FROM loader.#{table}
 ]
+
+# feedLine = %Q[
+#     case "#{table}":
+#         Bulk_#{table}.BulkImportTables(GetConnectionString(), fileName);
+#         break;
+# ]
+
     result += sqlquery
 end
 

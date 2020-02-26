@@ -365,7 +365,7 @@ files = %w[
 
 pdfText = "Hello, Criteries!"
 
-criteriesPath = 'D:/Files/Пример критериев/критерии/2016_06_30-03-09-10-11-13'
+criteriesPath = 'D:/data/Пример критериев/2016_06_30-03-09-10-11-13'
 
 files.each do |f|
     fullPath = File.join(criteriesPath, f)
