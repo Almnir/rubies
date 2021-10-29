@@ -8,7 +8,7 @@ file_data.each do |x|
                     "-skill-mastery-equip-guide/"
 end
 
-bot = Discordrb::Commands::CommandBot.new token: 'NzY1OTAxMzc2Mzk5MDgxNTEz.X4bjPQ.NzN23ce7boCqHiPxm369wrEybvI', client_id: 765901376399081513, prefix: '~'
+bot = Discordrb::Commands::CommandBot.new token: '', client_id: , prefix: '~'
 
 bot.command(:raid) do |event|
     champion = event.message.content.split(' ')[1]
