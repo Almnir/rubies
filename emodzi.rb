@@ -1,7 +1,11 @@
 class Fish
 	def 🔪 
 	  puts "🍣" 
-	end 
+	end
+	def 😮‍💨
+		puts "😵‍💫"
+	end
 end
 🐟 = Fish.new 
 🐟.🔪
+🐟.😮‍💨

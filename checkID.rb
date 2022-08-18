@@ -1,7 +1,9 @@
 require "rexml/document"
 require 'colorize'
 
-files = Dir.glob("**/*.fcrp")
+rootDir = 'd:/Reports/reports'
+
+files = Dir.glob("#{rootDir}/**/*.fcrp")
 
 file_id = {}
 found_duplicates = {}
@@ -19,5 +21,5 @@ files.each do |file_name|
 end
 
 found_duplicates.each do |key, value|
-    puts "DUPLICATE #{key}, #{value}".colorize(:color => :white, :background => :red)
+    puts "DUPLICATE #{key}, #{value}".colorize(:color => :white, :background => :magenta)
 end

@@ -5,7 +5,7 @@ require 'json'
 json = []
 
 allcounter = 0
-Date.new(2019, 1, 1).upto(DateTime.now) do |date|
+Date.new(2021, 12, 01).upto(DateTime.now) do |date|
     # params = {date: '#{date.to_s}', content_type: :json}
     # response = RestClient.get 'http://mcko.ru/api/diagnostic_requests_export', params
     uri = URI('https://mcko.ru/api/diagnostic_requests_export')

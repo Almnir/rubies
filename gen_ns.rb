@@ -1,9 +1,66 @@
 require 'tiny_tds'
 
 tablesList = [
-"sht_Alts"]
+    "ac_Appeals",
+    "ac_AppealTasks",
+    "ac_Changes",
+    "dats_Borders",
+    "dats_Groups",
+    "prnf_CertificatePrintMain",
+    "rbd_Address",
+    "rbd_Areas",
+    "rbd_Auditoriums",
+    "rbd_AuditoriumsSubjects",
+    "rbd_CurrentRegion",
+    "rbd_CurrentRegionAddress",
+    "rbd_Experts",
+    "rbd_ExpertsExams",
+    "rbd_ExpertsSubjects",
+    "rbd_Governments",
+    "rbd_ParticipantProperties",
+    "rbd_Participants",
+    "rbd_ParticipantsExamPStation",
+    "rbd_ParticipantsExams",
+    "rbd_ParticipantsExamsOnStation",
+    "rbd_ParticipantsProfSubject",
+    "rbd_ParticipantsSubject",
+    "rbd_Places",
+    "rbd_SchoolAddress",
+    "rbd_Schools",
+    "rbd_StationExamAuditory",
+    "rbd_StationForm",
+    "rbd_StationFormAct",
+    "rbd_StationFormAuditoryFields",
+    "rbd_StationFormFields",
+    "rbd_Stations",
+    "rbd_StationsExams",
+    "rbd_StationWorkerOnExam",
+    "rbd_StationWorkerOnStation",
+    "rbd_StationWorkers",
+    "rbd_StationWorkersAccreditation",
+    "rbd_StationWorkersSubjects",
+    "rbd_StationWorkersPositions",
+    "res_Answers",
+    "res_Complects",
+    "res_HumanTests",
+    "res_Marks",
+    "res_SubComplects",
+    "res_Subtests",
+    "sht_Alts",
+    "sht_FinalMarks_C",
+    "sht_FinalMarks_D",
+    "sht_Marks_AB",
+    "sht_Marks_C",
+    "sht_Marks_D",
+    "sht_Packages",
+    "sht_Sheets_AB",
+    "sht_Sheets_C",
+    "sht_Sheets_D",
+    "sht_Sheets_R",
+    "rbd_SchoolClasses"]
 
-client = TinyTds::Client.new username: 'sa', password: 'Te$tPS19', host: '85.143.100.49', port: 1433, database: 'erbd_gia_reg_19_70', azure:false
+client = TinyTds::Client.new username: 'ra', password: 'Njkmrjcdjb', host: '10.0.18.3', port: 1433, database: 'erbd_gia_reg_22_90', azure:false
+# client = TinyTds::Client.new username: 'sa', password: 'Te$tPS19', host: '85.143.100.49', port: 1433, database: 'erbd_gia_reg_19_70', azure:false
 
 proper_string = ""
 
@@ -42,9 +99,8 @@ tablesList.each do |table|
     table_columns.chomp!(",")
 
     proper_table += table_columns
-    proper_table += %Q[ FROM #{table} FOR XML PATH('ns1:#{table}'), ROOT('ns1:GIADBSet');  "},\n]
+    proper_table += %Q[ FROM #{table} FOR XML PATH('ns1:#{table}'), ROOT('ns1:GIADBSet');\" queryout #{table}.xml -c -r -C65001 "},\n]
     # proper_table += %Q[ FROM #{table} FOR XML PATH('ns1:#{table}'), ROOT('ns1:GIADBSet'); "}, \n]
-
     proper_string +=proper_table
 end
 

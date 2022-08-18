@@ -37,7 +37,7 @@ def find_substring(s, words)
       memo.clear
     end
     return result
-  end
+end
 
 s = "bcabbcaabbccacacbabccacaababcbb"
 words = ["c","b","a","c","a","a","a","b","c"]
